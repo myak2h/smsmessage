@@ -4,13 +4,18 @@ const MessagingResponse = require('twilio').twiml.MessagingResponse;
 const bodyParser = require('body-parser');
 
 const app = express();
-
+app.set('view engine', 'ejs');
 app.use(bodyParser());
 
+app.get('/', function(req, res) {
+    res.render('index');
+});
+
 app.post('/receive', (req, res) => {
-  const twiml = new MessagingResponse();
+  //const twiml = new MessagingResponse();
   console.log(req);
   var query = req.body.Body;
+  var result = "";
   if (query.match(/cw city \*(.*)\*/i)) {
     //twiml.message('Hi!');
   } else if(query.match(/cw zip \*(.*)\*/i)) {
@@ -20,19 +25,22 @@ app.post('/receive', (req, res) => {
   } else if(query.match(/fw zip \*(.*)\*/i)) {
     //twiml.message('Goodbye');
   }else {
-    twiml.message(`Invalid query, please use the following formats as example. \n
-                   for current weather:
-                   'cw city *london*'
-                   'cw zip *94040,us*'
-                   for weather forcast :
-                   'fw city *london*'
-                   'fw zip *94040,us*'
-    `);
+    // twiml.message(`Invalid query, please use the following formats as example. \n
+    //                for current weather:
+    //                'cw city *london*'
+    //                'cw zip *94040,us*'
+    //                for weather forcast :
+    //                'fw city *london*'
+    //                'fw zip *94040,us*'
+    // `);
   }
 
-  console.log(twiml.toString());
-  res.writeHead(200, {'Content-Type': 'text/xml'});
-  res.end(twiml.toString());
+  res.send(result);
+  //console.log(twiml.toString());
+  //res.writeHead(200, {'Content-Type': 'text/xml'});
+  //res.end(twiml.toString());
+
+  
 });
 
 http.createServer(app).listen(1337, () => {
