@@ -1,0 +1,42 @@
+{
+    "message": "accurate",
+    "cod": "200",
+    "count": 1,
+    "list": [
+        {
+            "id": 588335,
+            "name": "Tartu",
+            "coord": {
+                "lat": 58.3727,
+                "lon": 26.7238
+            },
+            "main": {
+                "temp": -9,
+                "pressure": 1027,
+                "humidity": 72,
+                "temp_min": -9,
+                "temp_max": -9
+            },
+            "dt": 1519210200,
+            "wind": {
+                "speed": 1.5
+            },
+            "sys": {
+                "country": "EE"
+            },
+            "rain": null,
+            "snow": null,
+            "clouds": {
+                "all": 0
+            },
+            "weather": [
+                {
+                    "id": 800,
+                    "main": "Clear",
+                    "description": "Sky is Clear",
+                    "icon": "01d"
+                }
+            ]
+        }
+    ]
+}
