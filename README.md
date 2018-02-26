@@ -9,4 +9,8 @@ Usage example
 
 cw city \*tartu\*
 
-in place of Tartu, you can replace the name of the city you want to get weather information for.
+In place of Tartu, you can replace the name of the city you want to get weather information for.
+
+If you want to test this application send me your phone number so that i can verify it with the code that is sent to you by twilio. This is because i am using the free plan of twilio. 
+
+My email is abel2mesfin@gmail.com.
