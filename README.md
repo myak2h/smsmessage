@@ -7,6 +7,6 @@ In the future, i am planning to add more functionalities to it like providing we
 
 Usage example 
 
-cw city *tartu*
+cw city \*tartu\*
 
 in place of Tartu, you can replace the name of the city you want to get weather information for.
